@@ -2,8 +2,8 @@
 >This is a Web App for analysing Gene Expression Data with Principal Component Analysis (PCA) which is a tool for dimension reduction of multi dimensional Data. 
 
 ## Installation
-For using the Web App you can either use this link ########### (no installation required) or install it locally on your computer. 
-For installing the R Package you just download the file app.R and save in on your computer. A full Zip Download of all resources is possible by using the green *Clone or Downlaod* Button on the top right corner. 
+The Web App can be used locally on your computer after downloading the source Code. 
+A full Zip Download of all resources is possible by using the green *Clone or Downlaod* Button on the top right corner. 
 
 These R Packages ***need to be installed*** for the package to work:
 * [BiocManager](https://www.bioconductor.org/install/)

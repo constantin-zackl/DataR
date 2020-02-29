@@ -1,4 +1,4 @@
-#  The Web App
+#  The PCA App
 
 The Web app performs a Principal Component Analysis (PCA) on the Golub dataset of leukemia patients. PCA is a tool for dimension reduction of multi dimensional data. In the input panel on the left side the number of genes in the analysis and the wanted Principal Components can be selected. It is also possible to change the maximum amount of gene names displayed in the Loading plot. In the main panel on the right side the user can select the plot type and can get some basic information about the analysis. Fore more information about the plot types please review the explanation below. 
 
@@ -10,7 +10,7 @@ The Golub data by Todd Golub covers the Gene Expression of 27 Patients with acut
 The App performs a PCA to find difference in the gene expression between these two group of patients. 
 
 ## Installation
-The Web App can be used locally on your computer after downloading the source code. 
+The PCA App can be used locally on your computer after downloading the source code. 
 A full Zip Download of all resources is possible by using the green *Clone or Downlaod* Button in the top right corner. 
 
 These R Packages ***need to be installed*** for the package to work:

@@ -1,28 +1,31 @@
 
-
+# importing the packages
 library(shiny)
 library(golubEsets)
+
+# importing the data
 data("Golub_Train")
 data = t(exprs(Golub_Train))
-data = replace(data, data<1, 1)
+data = replace(data, data<1, 1) # removing unusable Data
 data = log2(data)
 rownames(data)= c(replicate(27, "ALL"), replicate(11, "AML"))
 
-
 # Define UI for application
 ui = fluidPage(
+    
     # Application title
     titlePanel("Principal Component Analysis"),
 
     # Sidebar with all the inputs
     sidebarLayout(
         
+        #defining the input panel
         sidebarPanel(
             sliderInput("genenums",
                         "Number of Genes in the Analysis:",
-                        min = 25,
+                        min = 15,
                         max = 250,
-                        value = 100),
+                        value = 50),
             numericInput("firstPC", "First PC: ", value = 1),
             numericInput("secondPC", "Second PC: ", value = 2),
             br(),
@@ -69,17 +72,17 @@ ui = fluidPage(
 )
 
 # support functions
-
 recalcPCA = function (input){ # recalc the Analysis with a different amount of genes, as directed by the user
     var = names (sort(apply(data, 2, var), decreasing =TRUE)[1:input$genenums]) # selecting the genes with the most variance, number from the user input
     z = data[,var] # all data of the selected Genes
-    pca = prcomp(z, scale. = TRUE) 
+    pca = prcomp(z, scale. = TRUE) # the acutual PCA
     return (pca)
 }
 
 # The server logic, rendering the plots and different text outputs. 
 server = function(input, output) {
-
+    
+    # renderin the score plot
     output$scoreplot = renderPlot({
         pca = recalcPCA(input)
         first = input$firstPC
@@ -92,11 +95,13 @@ server = function(input, output) {
         
     })
     
+    # rendering the Scree plot
     output$screeplot = renderPlot({
         pca = recalcPCA(input)
         plot (pca, main = "")
     })
     
+    # rendering the biplot
     output$biplot = renderPlot({
         pca = recalcPCA(input)
         first = input$firstPC
@@ -104,11 +109,13 @@ server = function(input, output) {
         biplot (pca, choices = c(first, second))
     })
     
+    # rendering the loading Plot
     output$loadingplot = renderPlot({
         pca = recalcPCA(input)
         first = input$firstPC
         second = input$secondPC
         
+        # initializing the plot
         plot (pca$rotation[,first], pca$rotation[,second], xlab = "PC1", ylab= "PC2", type = "n")
         
         # adding the Arrows of the Genes
@@ -121,9 +128,10 @@ server = function(input, output) {
         
     })
     
-    output$countPCs = renderText({ # calculates the number of PCs which explain a specific amount of the total variance
+    # render the number of PCs to look at to explain a specific amount of the variance
+    output$countPCs = renderText({ 
         pca = recalcPCA(input)
-        eig = pca$sdev^2
+        eig = pca$sdev^2 # variance (eigenvector) of the PCs
         count = 0
         i = 1
         sumeigs = sum (eig)
@@ -138,11 +146,13 @@ server = function(input, output) {
         # i - 1 represents the actual number of principal components to look at because the counter i  starts at one
     })
     
+    # additional text output for the score plot
     output$scoreplottext = renderText({
         br()
         paste("The Score Plot displays a Projection of the Patients on the Principal Components. ALL Patients are displayed blue, AML patients are displayed red. For more information about this plot type please refer to the documentation. ")
     })
     
+    # additional text output for the loading plot
     output$loadinplottext = renderText({
         br()
         paste("The Loading Plot shows the impact of each Gene into the Principal Components (coefficients of the linear combination). For more information please refer to the documentation.")

@@ -14,10 +14,10 @@ These R Packages ***need to be installed*** for the package to work:
 To start the app open your R console and change the folder to the downloaded file, then use this code to execute the source code: 
 
 <code> 
-library(shiny)  <br>
+library(shiny)  
 runApp("app.R")
 </code>
-
+<br/>
 The testing has been done with R 3.6.1 with R Studio 1.2.5001 on Windows 10. 
 
 ##  The Web App

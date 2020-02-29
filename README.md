@@ -1,6 +1,6 @@
 #  The PCA App
 
-The Web app performs a Principal Component Analysis (PCA) on the Golub dataset of leukemia patients. PCA is a tool for dimension reduction of multi dimensional data. In the input panel on the left side the number of genes in the analysis and the wanted Principal Components can be selected. It is also possible to change the maximum amount of gene names displayed in the Loading plot. In the main panel on the right side the user can select the plot type and can get some basic information about the analysis. Fore more information about the plot types please review the explanation below. 
+The PCA app performs a Principal Component Analysis (PCA) on the Golub dataset of leukemia patients. PCA is a tool for dimension reduction of multi dimensional data. In the input panel on the left side the number of genes in the analysis and the wanted Principal Components can be selected. It is also possible to change the maximum amount of gene names displayed in the Loading plot. In the main panel on the right side the user can select the plot type and can get some basic information about the analysis. Fore more information about the plot types please review the explanation below. 
 
 <img src="Images/app.png"/>
 

@@ -1,6 +1,6 @@
 #  The PCA App
 
-The PCA app performs a Principal Component Analysis (PCA) on the Golub dataset of leukemia patients. PCA is a tool for dimension reduction of multi dimensional data. In the input panel on the left side the number of genes in the analysis and the wanted Principal Components can be selected. It is also possible to change the maximum amount of gene names displayed in the Loading plot. In the main panel on the right side the user can select the plot type and can get some basic information about the analysis. Fore more information about the plot types please review the explanation below. 
+The PCA app performs a Principal Component Analysis (PCA) on the Golub dataset of leukemia patients. PCA is a tool for dimension reduction of multi dimensional data. In the input panel on the left side the number of genes in the analysis and the wanted Principal Components can be selected. It is also possible to change the maximum amount of gene names displayed in the Loading plot. The displayed Genes then are the ones with the highest variance. In the main panel on the right side the user can select the plot type and can get some basic information about the analysis. For more information about the plot types please review the explanation below. 
 
 <img src="Images/app.png"/>
 
@@ -31,7 +31,7 @@ The testing has been done with R 3.6.1 with R Studio 1.2.5001 on Windows 10.
 ## What is Principal Component Analysis
 
 The gene expression of organisms is a very complex system. Changes in the conditions result in changes of a variety of genes correlated positive or negative. Therefore, a lot of information gain is made by looking at several genes at the same time. 
-While the gene expression of cells depends on thousands Genes (***multidimensional data***) only up to three dimensions of the data could be visualised at the same time. 
+While the gene expression of cells depends of thousands of genes (***multidimensional data***) only up to three dimensions of the data could be visualised at the same time. 
 
 In this case we will use the dimension reduction method Principal Component analysis to reduce the amount of dimensions of the data while keeping the maximum amount of information. 
 
@@ -39,7 +39,7 @@ In this case we will use the dimension reduction method Principal Component anal
 
 ### A three dimensional approach
 
-For explaining the idea of dimension with PCA we will first focus on visualising three dimensional data in two dimensions and will increase the amount of dimensions afterwards. For a visual explanation we have a look at the randomly generated expression data of 3 genes x, y and z from 100 Patients. We can visualise this data in three dimensions. One point in the plot represents one of the patients. 
+For explaining the idea of dimension reduction with PCA we will first focus on visualising three dimensional data in two dimensions and will increase the amount of dimensions afterwards. For a visual explanation we have a look at the randomly generated expression data of 3 genes x, y and z from 100 Patients. We can visualise this data in three dimensions. One point in the plot represents one of the patients. 
 
 But how is the difference in the expression? Can we group the Patients into different Groups? How can we see a difference in the expression? 
 <img src="Images/Score_Plot.png" align="left"/>

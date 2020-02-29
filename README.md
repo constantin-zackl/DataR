@@ -35,14 +35,10 @@ For explaining the idea of dimension with PCA we will first focus on visualising
 
 
 But how is the difference in the expression? Can we group the Patients into different Groups? How can we see a difference in the expression? 
-
+<img src="Images/Score_Plot.png" align="left"/>
 To answer these questions we can have a look from different sides on the data, imagine turning the plot in 3D Space and taking pictures from different views. Which picture has the best angle to group the patients or tell about a difference in the gene expression? 
 Here the Principal Components Analysis can compute this "view" on the Data for us. 
 With the given Data the Method tries to find an axis trough the three dimensional Data with the maximal possible variance, this axis is called "Principal Component 1 (PC1)". 
-
-<img src="Images/Score_Plot.png" align="left"/>
-
-
 
 Orthogonal to that axis it constructs another Principal Component maximisign the rest of the Variance an so on. With three dimensional Data we can get a maximum of three new Principal Components who are a new orthogonal Coordinate System to have a look at the data. As defined along PC1 the data shows the biggest Variance, along PC2 the second biggest etc. To have the "best" view on the Data we have to Plot PC1 against PC2. 
 
@@ -100,7 +96,9 @@ Often the results of a PCA get visualized with a Biplot which is a combination o
 The Principal Component Analysis can reveal how exactly the patients vary in their expression. The Score Plot is a good start to see if there is a significant difference. For understanding this difference the Loading Plot shows the Genes which construct the view seen in the Score Plot. With the Gene names same or different Expression Names can be found. 
 
 
-
+<img src="Images/Biplot.png" align="left"/> 
+<br/>
+<img src="Images/Screeplot.png" align="right"/>
 
 
 

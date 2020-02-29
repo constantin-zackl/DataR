@@ -82,8 +82,7 @@ The greatest power of the PCA is the dimension reduction trough a projection of 
 
 Often the results of a PCA get visualized with a Biplot which is a combination of the shown Score and Loading Plots. 
 
-![](Images/Biplot.png)
-![](Images/Screeplot.png)
+
 
 
 

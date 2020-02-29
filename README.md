@@ -89,12 +89,31 @@ Often the results of a PCA get visualized with a ***Biplot*** which is a combina
 
 ## The Golub Data
 
+The Golub Data by Todd Golub cover the Gene Expression of 27 Patients with acute lymphoblastic leukemia (ALL) and 11 patients with acute myeloid leukemia (AML). In total there were 7129 Genes measured. 
+The App performs a PCA to find difference in the gene expression between these two group of patients. 
 
 ## Used Functions
 
+* data("Golub_Train""), exprs(Golub_Train): Loading the Data from the Dataset
+* replace (): Removing unwanted Data
+* log2(): 
+* rownames(): changing the rownames to the leukemia type of the patient
+* fluidPage(): UI definition
+* titlePanel(): title setup of the App
+* sidebarLayout(): sidebar UI
+* sidbarPanel(): initialising the Input Panel on the left side
+* manPanel(): initialising the main Panel with the plots
+* sliderInput(), numericInput(): getting User intput
+* tabsetpanel(), tabPanel(): initializing the Panel setup of the plots
+* recalcPCA(): recalculation of the PCA when the number of Genes is changed
+* sort(): sorting the data
+* prcomp(): the Principal Component Analysis
+* server (), renderPlot(), renderText(): rendering dynamic Outputs
+* plot(), points(), arrows(), text(): Functions for Creating the PCA Plots
 
 
 ## The results
 
 The Principal Component Analysis can reveal how exactly the patients vary in their expression. The Score Plot is a good start to see if there is a significant difference. For understanding this difference the Loading Plot shows the Genes which construct the view seen in the Score Plot. With the Gene names same or different Expression Names can be found. 
+
 

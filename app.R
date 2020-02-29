@@ -22,16 +22,16 @@ ui = fluidPage(
         #defining the input panel
         sidebarPanel(
             sliderInput("genenums",
-                        "Number of Genes in the Analysis:",
+                        "Number of genes in the analysis:",
                         min = 15,
                         max = 250,
                         value = 50),
             numericInput("firstPC", "First PC: ", value = 1),
             numericInput("secondPC", "Second PC: ", value = 2),
             br(),
-            p("At the Moment the Analysis runs with Gene Expression Data from the Golub Dataset."),
-            numericInput("geneNameNumber", "Number Of Gene Names displayed in the Loading Plot:", value = 15 ),
-            p("The selected Number of Gene Names has to be lower than the number of Genes in the analysis (slider)")
+            p("At the moment the analysis runs with gene expression data from the Golub dataset."),
+            numericInput("geneNameNumber", "Number Of gene names displayed in the Loading Plot:", value = 15 ),
+            p("The selected number of gene names has to be lower than the number of genes in the analysis.")
         ),
 
         # Filling the main panel with all the plots with a panel menu
@@ -39,14 +39,12 @@ ui = fluidPage(
 
            tabsetPanel(
                 #main Panel with explanation
-                tabPanel("PCA - The Method",
+                tabPanel("PCA - The method",
                     br(),
-                    p("Principal Component Analysis is a Method for Dimension Reduction which is used for analysis multidimensional Data. For this reduction the data gets projected on constructed 
-                      Principal Components (PC) while keeping the maximum amount of Information possible. For an explanation of the Method and the used functions please have a look in the documentation
-                        . This example analysisi the Golub Data which consists of Expression Data of 38 Patients with Leukemia. Information on the Dataset are also accesible in the documentation.
+                    p("Principal Component Analysis is a method for dimension reduction which is used for analysis multidimensional data. For this reduction the data gets projected on constructed 
+                      Principal Components (PC) while keeping the maximum amount of information possible. For an explanation of the method and the used functions please have a look in the documentation
+                        . This example analyses the Golub data which consists of expression data of 38 patients with leukemia. Information on the dataset are also accesible in the documentation.
                       "),
-                    br(),
-                    p("Useful links:"),
                 ),
                 # Score Plot
                 tabPanel("Score plot", plotOutput("scoreplot"), textOutput("scoreplottext")),#
@@ -56,14 +54,14 @@ ui = fluidPage(
                 tabPanel("Loading plot", plotOutput("loadingplot"),
                     br(),
                     p("The Loading plot shows the impact of each gene in the Principal Components (coefficients of the linear combination). Genes which are strongly correlated are
-                      displayed close to each other. The Plot uses a Arrow / Vector design similar to the biplot. For a better visualisation the number of displayed Gene names is
-                      limited and can be changed on the left side. More information about Loading Plots can be found in the documentation.")     
+                      displayed close to each other. The Plot uses a Arrow / Vector design similar to the biplot. For a better visualisation the number of displayed gene names is
+                      limited and can be changed on the left side. More information about Loading plots can be found in the documentation.")     
                          
                 ),
                 # Biplot
                 tabPanel("Biplot", plotOutput("biplot"), 
-                    p("The Biplot is a combination of the Loading and Score Plot and is a great way for a fast acces to the PCA results. In case this Plot is too complex and chaotic a second 
-                      view into the single Plots can show a more detailed view. It is also possible to reduce the amount of Genes in the Analysis with the slider on the left side.")
+                    p("The Biplot is a combination of the Loading and Score plot and is a great way for a fast acces to the PCA results. In case this plot is too complex and chaotic a second 
+                      view into the single plots can show a more detailed view. It is also possible to reduce the amount of genes in the analysis with the slider on the left side.")
                               
                 )
             )
@@ -141,15 +139,15 @@ server = function(input, output) {
             i = i + 1
         }
         
-        paste("The Scree Plot displays the variance of each Principal Component. As definied the first principal component has the biggest Variance and 
-              therefore explains the most most difference in the Data.For example you should have a look at the first ", i-1, "PCs to cover", limitv *100, "% of the Variance!")
+        paste("The Scree plot displays the variance of each Principal Component. As definied the first Principal Component has the biggest Variance and 
+              therefore explains the most most difference in the Data. You should have a look at the first ", i-1, "PCs to cover", limitv *100, "% of the Variance!")
         # i - 1 represents the actual number of principal components to look at because the counter i  starts at one
     })
     
     # additional text output for the score plot
     output$scoreplottext = renderText({
         br()
-        paste("The Score Plot displays a Projection of the Patients on the Principal Components. ALL Patients are displayed blue, AML patients are displayed red. For more information about this plot type please refer to the documentation. ")
+        paste("The Score Plot displays a projection of the paatients on the Principal Components. ALL patients are displayed blue, AML patients are displayed red. For more information about this plot type please refer to the documentation. ")
     })
     
     # additional text output for the loading plot

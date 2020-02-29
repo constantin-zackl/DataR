@@ -1,6 +1,17 @@
 # Principal Component Web App
 >This is a Web App for analysing Gene Expression Data with Principal Component Analysis (PCA) which is a tool for dimension reduction of multi dimensional Data. 
 
+##  The Web App
+
+The Web app performs a Principal Component Analysis on the Golub Data Set of leukemia Patients. In the input Panel on the left side the number of genes in the analysis and the wanted Principal Components can be selected. It is also possible to change the maximum amount of Gene Names displayed in the Loading Plot. In the main Panel on the right side the user can select the plot type and can get some basic information about the analysis. Fore more information about the plot types please review the explanation below. 
+
+<img src="Images/app.png"/>
+
+## The Golub Data
+
+The Golub Data by Todd Golub cover the Gene Expression of 27 Patients with acute lymphoblastic leukemia (ALL) and 11 patients with acute myeloid leukemia (AML). In total there were 7129 Genes measured. 
+The App performs a PCA to find difference in the gene expression between these two group of patients. 
+
 ## Installation
 The Web App can be used locally on your computer after downloading the source Code. 
 A full Zip Download of all resources is possible by using the green *Clone or Downlaod* Button on the top right corner. 
@@ -19,15 +30,6 @@ runApp("app.R")
 </code>
 <br/>
 The testing has been done with R 3.6.1 with R Studio 1.2.5001 on Windows 10. 
-
-##  The Web App
-
-The Web app performs a Principal Component Analysis on the Golub Data Set of leukemia Patients. In the input Panel on the left side the number of genes in the analysis and the wanted Principal Components can be selected. It is also possible to change the maximum amount of Gene Names displayed in the Loading Plot. In the main Panel on the right side the user can select the plot type and can get some basic information about the analysis. Fore more information about the plot types please review the explanation below. 
-
-## The Golub Data
-
-The Golub Data by Todd Golub cover the Gene Expression of 27 Patients with acute lymphoblastic leukemia (ALL) and 11 patients with acute myeloid leukemia (AML). In total there were 7129 Genes measured. 
-The App performs a PCA to find difference in the gene expression between these two group of patients. 
 
 ## What is Principal Component Analysis
 

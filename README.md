@@ -109,5 +109,5 @@ The Principal Component Analysis can reveal how exactly the patients vary in the
 For further information about Principal Component Analysis please have a look at these resouces: 
 * [Youtube: PCA - main ideas in 5 Minutes](https://youtu.be/HMOI_lkzW08)
 * [Youtube: PCA - step by step](https://youtu.be/FgakZw6K1QQ)
-* [Wikipedia_ Principal Component Analysis](https://en.wikipedia.org/wiki/Principal_component_analysis)
+* [Wikipedia: Principal Component Analysis](https://en.wikipedia.org/wiki/Principal_component_analysis)
 

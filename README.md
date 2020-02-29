@@ -28,7 +28,7 @@ runApp("app.R")
 <br/>
 The testing has been done with R 3.6.1 with R Studio 1.2.5001 on Windows 10. 
 
-## What is Principal Component Analysis
+## What is Principal Component Analysis?
 
 The gene expression of organisms is a very complex system. Changes in the conditions result in changes of a variety of genes correlated positive or negative. Therefore, a lot of information gain is made by looking at several genes at the same time. 
 While the gene expression of cells depends of thousands of genes (***multidimensional data***) only up to three dimensions of the data could be visualised at the same time. 
@@ -45,7 +45,7 @@ But how is the difference in the expression? Can we group the Patients into diff
 <img src="Images/Score_Plot.png" align="left"/>
 To answer these questions we can have a look from different sides on the data, imagine turning the plot in 3D space and taking pictures from different views. Which picture has the best angle to group the patients or tell about a difference in the gene expression? 
 Here the Principal Components Analysis can compute this "view" on the data for us. 
-With the given data the Mmthod tries to find an axis trough the three dimensional data with the maximal possible variance, this axis is called "Principal Component 1 (PC1)". 
+With the given data the method tries to find an axis trough the three dimensional data with the maximal possible variance, this axis is called "Principal Component 1 (PC1)". 
 
 Orthogonal to that axis it constructs another Principal Component maximising the rest of the variance. With three dimensional data we can get a maximum of three new Principal Components who are a new orthogonal Coordinate System to have a look at the data. As defined along PC1 the data shows the biggest variance, along PC2 the second biggest etc. To have the "best" view on the Data we have to Plot PC1 against PC2. 
 

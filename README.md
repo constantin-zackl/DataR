@@ -102,7 +102,7 @@ The source code which was used for generating the explaining plots is available 
 
 ## The results
 
-The Principal Component Analysis can reveal how exactly the patients vary in their expression. The Score Plot is a good start to see if there is a significant difference. For understanding this difference the Loading plot shows the genes which construct the view seen in the Score plot. Strongly correlated genes are expressed with very close arrows. The displayed gene names can be used to get more information about the genes in databases. 
+The Principal Component Analysis can reveal how exactly the patients vary in their expression. The Score Plot is a good start to see if there is a significant difference. For understanding this difference the Loading plot shows the genes which construct the view seen in the Score plot. Strongly correlated genes are expressed with very close arrows. The displayed gene names can be used to get more information about the genes in databases. In the Leukemia example the PCA can reveal how exactly the two group of patients vary in their gene expression and how different the two types are.
 
 
 ## Further Information

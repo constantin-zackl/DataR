@@ -10,7 +10,7 @@ data = cbind (x, y,z)
 pca = prcomp (data)
 
 #Scoreplot
-plot (pca$x[,1], pca$x[,2], xlab = "PC1", ylab = "PC2", main = "Score Plot") #scoreplot!
+plot (pca$x[,1], pca$x[,2], xlab = "PC1", ylab = "PC2", main = "Score Plot") 
 
 # loading Plot
 plot (pca$rotation[,1], pca$rotation[,2], xlab = "PC1", ylab= "PC2", type = "n", main = "Loading Plot")
@@ -27,7 +27,7 @@ plot (pca, main = "Screeplot")
 scatter3D(x, y,z, pch=20, col = "blue", bty="b2", phi=0, theta =0, main ="Rotated Expression Data")
 
 # the rotation used for the "PCA View" may be different when rerunning the programm because the Expression Data is generated randomly
-
+# the data behind the documentation Plots is available in the Github Folder. file: PCA_test_data.txt
 
 # biplot
 biplot(pca, choices = 1:2, main = "Biplot")

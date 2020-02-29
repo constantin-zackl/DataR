@@ -83,9 +83,11 @@ Often the results of a PCA get visualized with a ***Biplot*** which is a combina
 <img src="Images/Biplot.png"/> 
 </p>
 
-
+The source code which was used for generating the explaining plots is available in the file ##########. The randomly generated three Dimensional Data is also available for recalculations in the file ##########.
 
 ##  The Web App
+
+The Web app performs a Principal Component Analysis on the Golub Data Set of leukemia Patients. In the input Panel on the left side the number of genes in the analysis and the wanted Principal Components can be selected. It is also possible to change the maximum amount of Gene Names displayed in the Loading Plot. In the main Panel on the right side the user can select the plot type and can get some basic information about the analysis. Fore more information about the plot types please review the explanation above. 
 
 ## The Golub Data
 

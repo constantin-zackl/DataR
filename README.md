@@ -18,6 +18,15 @@ library(shiny)  <br>
 runApp("app.R")
 </code>
 
+##  The Web App
+
+The Web app performs a Principal Component Analysis on the Golub Data Set of leukemia Patients. In the input Panel on the left side the number of genes in the analysis and the wanted Principal Components can be selected. It is also possible to change the maximum amount of Gene Names displayed in the Loading Plot. In the main Panel on the right side the user can select the plot type and can get some basic information about the analysis. Fore more information about the plot types please review the explanation below. 
+
+## The Golub Data
+
+The Golub Data by Todd Golub cover the Gene Expression of 27 Patients with acute lymphoblastic leukemia (ALL) and 11 patients with acute myeloid leukemia (AML). In total there were 7129 Genes measured. 
+The App performs a PCA to find difference in the gene expression between these two group of patients. 
+
 ## What is Principal Component Analysis
 
 The gene expression of organisms is a very complex system. Changes in the conditions result in changes of a variety of genes correlated positive or negative. Therefore, a lot of information gain is made by looking at several Genes at the same time. 
@@ -72,15 +81,6 @@ Often the results of a PCA get visualized with a ***Biplot*** which is a combina
 
 The source code which was used for generating the explaining plots is available in the file PCA_example.R . The randomly generated three Dimensional Data is also available for recalculations in the file PCA_test_data.txt.
 
-##  The Web App
-
-The Web app performs a Principal Component Analysis on the Golub Data Set of leukemia Patients. In the input Panel on the left side the number of genes in the analysis and the wanted Principal Components can be selected. It is also possible to change the maximum amount of Gene Names displayed in the Loading Plot. In the main Panel on the right side the user can select the plot type and can get some basic information about the analysis. Fore more information about the plot types please review the explanation above. 
-
-## The Golub Data
-
-The Golub Data by Todd Golub cover the Gene Expression of 27 Patients with acute lymphoblastic leukemia (ALL) and 11 patients with acute myeloid leukemia (AML). In total there were 7129 Genes measured. 
-The App performs a PCA to find difference in the gene expression between these two group of patients. 
-
 ## Used Functions
 
 * data("Golub_Train""), exprs(Golub_Train): Loading the Data from the Dataset
@@ -103,7 +103,7 @@ The App performs a PCA to find difference in the gene expression between these t
 
 ## The results
 
-The Principal Component Analysis can reveal how exactly the patients vary in their expression. The Score Plot is a good start to see if there is a significant difference. For understanding this difference the Loading Plot shows the Genes which construct the view seen in the Score Plot. With the Gene names same or different Expression Names can be found. 
+The Principal Component Analysis can reveal how exactly the patients vary in their expression. The Score Plot is a good start to see if there is a significant difference. For understanding this difference the Loading Plot shows the Genes which construct the view seen in the Score Plot. Strongly correlated Genes are expressed with very close arrows. The displayed Gene names can be used to get more information about the genes in the internet or databases. 
 
 
 ## Further Information

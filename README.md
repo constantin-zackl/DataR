@@ -57,22 +57,20 @@ But how exactly do the Principal Components look like? As said before in this th
 
 In the result of the PCA the coefficients of the Principal Components are called Loadings and can be visualised in a ***Loading Plot***. In the following Loading Plot the actual composition of the first two PCs are visualized. 
 
-As we can see PC1 is made up mainly by the original gene x why PC 2 is mainly characterized by Gene z. In the first Prinical components gene y seems not to explain a lot of the found variance. 
+As we can see PC1 is made up mainly by the original gene x while PC 2 is mainly characterized by Gene z. In the first Principal Components gene y seems not to explain a lot of the found variance. 
 
 <img src="Images/Rotated_Expression_Data.png" align="left"/>
 
 Because we are working with three dimensional Data we can still have a look into the original Data. This time we rotate the Plot to have a look in the x/z direction as directed from the PCA. 
 
-When we take a look back on the Score Plot we can clearly see that this is nearly the view which was calculated by the PCA, however the exact view consists in a small rotation in the y axis which can be seen in the Loading Plot. 
+When we take a look back on the Score Plot we can clearly see that this is nearly the view which was calculated by the PCA, however the exact view consists in a small rotation in the y axis which can be seen in the Loading Plot. Also this view still has the three dimensional perspective while the Score plot is projected on the plane described by the Principal Components. 
 
 ### Multi Dimensional Data
-In our three Dimensional example the "best view" can clearly also be found with rotating the original Data, but with multidimensional data this is, due to the impossible visualisation, unpractial. The Principal components can still be computed an visualised. The main Part of the Variance can be explained by more than 2 PCs. But on how many PCs to we have to look at? 
+In our three Dimensional example the "best view" can clearly also be found with rotating the original Data, but with multidimensional data this is, due to the impossible visualisation, unpractial. The Principal Components can still be computed an visualised. The main part of the variance can be explained by more than 2 PCs. But on how many PCs to we have to look at? 
 
 <img src="Images/Screeplot.png" align="right"/>
 
-The following ***Scree Plot*** contains the Variance for eatch Principal Component. By a look at this Plot we have a visual indicator at how many Principal Components we have to look. 
-
-The greatest power of the PCA is the dimension reduction trough a projection of data on the calculated Principal Components. 
+The following ***Scree Plot*** shows the variance for each Principal Component. By a look at this Plot we have a visual indicator at how many Principal Components we have to look.  
 
 Often the results of a PCA get visualized with a ***Biplot*** which is a combination of the shown Score and Loading Plots. 
 
@@ -80,12 +78,12 @@ Often the results of a PCA get visualized with a ***Biplot*** which is a combina
 <img src="Images/Biplot.png"/> 
 </p>
 
-The source code which was used for generating the explaining plots is available in the file PCA_example.R . The randomly generated three Dimensional Data is also available for recalculations in the file PCA_test_data.txt.
+The source code which was used for generating the explaining plots is available in the file PCA_example.R . The randomly generated three Dimensional data is also available for recalculations in the file PCA_test_data.txt.
 
 ## Used Functions
 
-* data("Golub_Train""), exprs(Golub_Train): Loading the Data from the Dataset
-* replace (): Removing unwanted Data
+* data("Golub_Train""), exprs(Golub_Train): Loading the data from the dataset
+* replace (): Removing unwanted data
 * log2(): 
 * rownames(): changing the rownames to the leukemia type of the patient
 * fluidPage(): UI definition
@@ -99,12 +97,12 @@ The source code which was used for generating the explaining plots is available 
 * sort(): sorting the data
 * prcomp(): the Principal Component Analysis
 * server (), renderPlot(), renderText(): rendering dynamic Outputs
-* plot(), points(), arrows(), text(): Functions for Creating the PCA Plots
+* plot(), points(), arrows(), text(): Functions for creating the PCA Plots
 
 
 ## The results
 
-The Principal Component Analysis can reveal how exactly the patients vary in their expression. The Score Plot is a good start to see if there is a significant difference. For understanding this difference the Loading Plot shows the Genes which construct the view seen in the Score Plot. Strongly correlated Genes are expressed with very close arrows. The displayed Gene names can be used to get more information about the genes in the internet or databases. 
+The Principal Component Analysis can reveal how exactly the patients vary in their expression. The Score Plot is a good start to see if there is a significant difference. For understanding this difference the Loading plot shows the genes which construct the view seen in the Score plot. Strongly correlated genes are expressed with very close arrows. The displayed gene names can be used to get more information about the genes in databases. 
 
 
 ## Further Information

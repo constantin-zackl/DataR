@@ -5,7 +5,7 @@
 For using the Web App you can either use this link ########### (no installation required) or install it locally on your computer. 
 For installing the R Package you ########################
 
-These R Packages need to be installed for the package to work:
+These R Packages ***need to be installed*** for the package to work:
 * [BiocManager](https://www.bioconductor.org/install/)
 * [GolubEsets](https://bioconductor.org/packages/release/data/experiment/html/golubEsets.html)
 * [shiny](https://shiny.rstudio.com/)
@@ -82,7 +82,7 @@ Often the results of a PCA get visualized with a ***Biplot*** which is a combina
 <img src="Images/Biplot.png"/> 
 </p>
 
-The source code which was used for generating the explaining plots is available in the file ##########. The randomly generated three Dimensional Data is also available for recalculations in the file ##########.
+The source code which was used for generating the explaining plots is available in the file PCA_example.R . The randomly generated three Dimensional Data is also available for recalculations in the file PCA_test_data.txt.
 
 ##  The Web App
 
@@ -117,4 +117,11 @@ The App performs a PCA to find difference in the gene expression between these t
 
 The Principal Component Analysis can reveal how exactly the patients vary in their expression. The Score Plot is a good start to see if there is a significant difference. For understanding this difference the Loading Plot shows the Genes which construct the view seen in the Score Plot. With the Gene names same or different Expression Names can be found. 
 
+
+## Further Information
+For further information about Principal Component Analysis please have a look at these resouces: 
+* [Youtube: PCA - main ideas in 5 Minutes](https://youtu.be/HMOI_lkzW08)
+* [Youtube: PCA - step by step](https://youtu.be/FgakZw6K1QQ)
+* [Wikipedia_ Principal Component Analysis](https://en.wikipedia.org/wiki/Principal_component_analysis)
+* 
 

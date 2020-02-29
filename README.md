@@ -5,18 +5,17 @@
 For using the Web App you can either use this link ########### (no installation required) or install it locally on your computer. 
 For installing the R Package you ########################
 
-These R Packages need to be installed for the package to work: 
-<ul>
-<li>shiny</li>
-<li>yeastCC</li>
-<li>Golub</li>
-</ul>
+These R Packages need to be installed for the package to work:
+* [BiocManager](https://www.bioconductor.org/install/)
+* [GolubEsets](https://bioconductor.org/packages/release/data/experiment/html/golubEsets.html)
+* [shiny](https://shiny.rstudio.com/)
+* For recalculationg the explaining Plots: [plot3D](http://www.sthda.com/english/wiki/impressive-package-for-3d-and-4d-graph-r-software-and-data-visualization)
 
 To start the app open your R console and change the folder to the downloaded file, then use this code to execute the source code: 
 
 <code> 
 library(shiny)  <br>
-runApp("##########")
+runApp("app.R")
 </code>
 
 
